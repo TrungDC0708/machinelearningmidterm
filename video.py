@@ -61,7 +61,7 @@ def write(x, results):
 
 videofile = args.videofile
 
-cap = cv2.VideoCapture('video.mp4')
+cap = cv2.VideoCapture(args.videofile)
 
 frames = 0
 start = time.time()
