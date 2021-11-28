@@ -15,11 +15,11 @@ def arg_parse():
     parser = argparse.ArgumentParser(description='YOLO v3 Detection Module')
     parser.add_argument("--cfg", dest='cfgfile', help=
     "Config file",
-                        default="config/yolo-tiny.cfg", type=str)
+                        default="config/yolov3.cfg", type=str)
     parser.add_argument("--weights", dest='weightsfile', help=
     "weightsfile",
-                        default="weights/yolov3-tiny.weights", type=str)
-    parser.add_argument("--video", dest="videofile", help="Video file to     run detection on", default="video.avi",
+                        default="weights/yolov3.weights", type=str)
+    parser.add_argument("--video", dest="videofile", help="Video file to     run detection on", default="video.mp4",
                         type=str)
 
     return parser.parse_args()
@@ -59,7 +59,7 @@ def write(x, results):
 
 
 
-videofile = args.videofile
+
 
 cap = cv2.VideoCapture(args.videofile)
 
